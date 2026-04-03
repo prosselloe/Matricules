@@ -82,6 +82,6 @@ Aquí es mostra la llista completa de províncies amb les seves sigles correspon
 *   **Web:** [prosselloe.wordpress.com](http://prosselloe.wordpress.com)
 *   **Correu electrònic:** [prosselloe@gmail.com](mailto:prosselloe@gmail.com)
 
-© prosselloe 2019
+© prosselloe 2019-2026
 
 ## Crèdits
