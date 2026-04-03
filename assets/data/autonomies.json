@@ -1,0 +1,191 @@
+[
+  {
+    "id": 1,
+    "name": "Andalucía",
+    "flagUrl": "assets/images/andalucía.png",
+    "flag": "🇪🇸",
+    "coordinates": { "latitude": 37.3891, "longitude": -5.9845 },
+    "dateFrom": "1982",
+    "dateTo": null
+  },
+  {
+    "id": 2,
+    "name": "Aragón",
+    "flagUrl": "assets/images/aragon.gif",
+    "flag": "🇪🇸",
+    "coordinates": { "latitude": 41.6488, "longitude": -0.8891 },
+    "dateFrom": "1982",
+    "dateTo": null
+  },
+  {
+    "id": 3,
+    "name": "Asturias",
+    "flagUrl": "assets/images/asturias.gif",
+    "flag": "🇪🇸",
+    "coordinates": { "latitude": 43.3603, "longitude": -5.8448 },
+    "dateFrom": "1981",
+    "dateTo": null
+  },
+  {
+    "id": 4,
+    "name": "Baleares",
+    "flagUrl": "assets/images/baleares.gif",
+    "flag": "🇪🇸",
+    "coordinates": { "latitude": 39.5696, "longitude": 2.6502 },
+    "dateFrom": "1983",
+    "dateTo": null
+  },
+  {
+    "id": 5,
+    "name": "Canarias",
+    "flagUrl": "assets/images/canarias.gif",
+    "flag": "🇪🇸",
+    "coordinates": { "latitude": 28.4636, "longitude": -16.2518 },
+    "dateFrom": "1982",
+    "dateTo": null
+  },
+  {
+    "id": 6,
+    "name": "Cantabria",
+    "flagUrl": "assets/images/cantabria.gif",
+    "flag": "🇪🇸",
+    "coordinates": { "latitude": 43.4623, "longitude": -3.8099 },
+    "dateFrom": "1981",
+    "dateTo": null
+  },
+  {
+    "id": 7,
+    "name": "Castilla y León",
+    "flagUrl": "assets/images/castilla_leon.gif",
+    "flag": "🇪🇸",
+    "coordinates": { "latitude": 41.6523, "longitude": -4.7245 },
+    "dateFrom": "1983",
+    "dateTo": null
+  },
+  {
+    "id": 8,
+    "name": "Castilla-La Mancha",
+    "flagUrl": "assets/images/castilla_la_mancha.gif",
+    "flag": "🇪🇸",
+    "coordinates": { "latitude": 39.8628, "longitude": -4.0273 },
+    "dateFrom": "1982",
+    "dateTo": null
+  },
+  {
+    "id": 9,
+    "name": "Cataluña",
+    "flagUrl": "assets/images/cataluna.gif",
+    "flag": "🇪🇸",
+    "coordinates": { "latitude": 41.3851, "longitude": 2.1734 },
+    "dateFrom": "1979",
+    "dateTo": null
+  },
+  {
+    "id": 10,
+    "name": "Valenciana",
+    "flagUrl": "assets/images/valenciana.png",
+    "flag": "🇪🇸",
+    "coordinates": { "latitude": 39.4699, "longitude": -0.3763 },
+    "dateFrom": "1982",
+    "dateTo": null
+  },
+  {
+    "id": 11,
+    "name": "Extremadura",
+    "flagUrl": "assets/images/extremadura.gif",
+    "flag": "🇪🇸",
+    "coordinates": { "latitude": 38.9161, "longitude": -6.3437 },
+    "dateFrom": "1983",
+    "dateTo": null
+  },
+  {
+    "id": 12,
+    "name": "Galicia",
+    "flagUrl": "assets/images/galicia.gif",
+    "flag": "🇪🇸",
+    "coordinates": { "latitude": 42.8782, "longitude": -8.5448 },
+    "dateFrom": "1981",
+    "dateTo": null
+  },
+  {
+    "id": 13,
+    "name": "La Rioja",
+    "flagUrl": "assets/images/la_rioja.gif",
+    "flag": "🇪🇸",
+    "coordinates": { "latitude": 42.4627, "longitude": -2.4450 },
+    "dateFrom": "1982",
+    "dateTo": null
+  },
+  {
+    "id": 14,
+    "name": "Madrid",
+    "flagUrl": "assets/images/madrid.gif",
+    "flag": "🇪🇸",
+    "coordinates": { "latitude": 40.4168, "longitude": -3.7038 },
+    "dateFrom": "1983",
+    "dateTo": null
+  },
+  {
+    "id": 15,
+    "name": "Murcia",
+    "flagUrl": "assets/images/murcia.gif",
+    "flag": "🇪🇸",
+    "coordinates": { "latitude": 37.9922, "longitude": -1.1307 },
+    "dateFrom": "1982",
+    "dateTo": null
+  },
+  {
+    "id": 16,
+    "name": "Navarra",
+    "flagUrl": "assets/images/navarra.gif",
+    "flag": "🇪🇸",
+    "coordinates": { "latitude": 42.8125, "longitude": -1.6457 },
+    "dateFrom": "1982",
+    "dateTo": null
+  },
+  {
+    "id": 17,
+    "name": "País Vasco",
+    "flagUrl": "assets/images/pais_vasco.gif",
+    "flag": "🇪🇸",
+    "coordinates": { "latitude": 42.8467, "longitude": -2.6716 },
+    "dateFrom": "1979",
+    "dateTo": null
+  },
+  {
+    "id": 18,
+    "name": "Ceuta",
+    "flagUrl": "assets/images/ceuta.png",
+    "flag": "🇪🇸",
+    "coordinates": { "latitude": 35.8894, "longitude": -5.3198 },
+    "dateFrom": "1995",
+    "dateTo": null
+  },
+  {
+    "id": 19,
+    "name": "Melilla",
+    "flagUrl": "assets/images/melilla.png",
+    "flag": "🇪🇸",
+    "coordinates": { "latitude": 35.2923, "longitude": -2.9381 },
+    "dateFrom": "1995",
+    "dateTo": null
+  },
+  {
+    "id": 20,
+    "name": "Africa Occidental",
+    "flagUrl": "assets/images/marruecos.gif",
+    "flag": "🇲🇦",
+    "coordinates": { "latitude": 29.38, "longitude": -10.17 },
+    "dateFrom": "1958",
+    "dateTo": "1976"
+  },
+  {
+    "id": 21,
+    "name": "Golfo de Guinea",
+    "flagUrl": "assets/images/guinea.gif",
+    "flag": "🇬🇶",
+    "coordinates": { "latitude": 3.75, "longitude": 8.78 },
+    "dateFrom": "1959",
+    "dateTo": "1968"
+  }
+]

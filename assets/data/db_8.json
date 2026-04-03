@@ -1,0 +1,74 @@
+[
+  {
+    "id": 53,
+    "name": "Sahara",
+    "acronym": "ME / SHA / SH",
+    "autonomy": "Africa Occidental",
+    "description": "Primera matriculació: 1951. Va evolucionar de ME (Marroc Espanyol) a SHA i finalment SH fins a la seva descolonització el 1976.",
+    "flagUrl": "assets/images/sahara.gif",
+    "isMissing": true,
+    "region": "Africa Occidental",
+    "capital": "El Aaiún",
+    "plateNumbers": [
+      {"plateYear": "1963", "dateFrom": "1958-01-01", "dateTo": "1963-12-31", "plateFrom": "1", "plateTo": "1500"},
+      {"plateYear": "1970", "dateFrom": "1964-01-01", "dateTo": "1970-12-31", "plateFrom": "1501","plateTo": "5000"},
+      {"plateYear": "1976", "dateFrom": "1971-01-01", "dateTo": "1976-12-31", "plateFrom": "5001", "plateTo": "7000"}
+    ],
+    "relatedProvinces": [35, 38, 54],
+    "unitsPlates": 7000
+  },
+  {
+    "id": 54,
+    "name": "Ifni",
+    "acronym": "ME / I / IF",
+    "autonomy": "Africa Occidental",
+    "description": "Primera matriculació: 1951. Va usar les sigles ME, I i finalment IF fins al 1969.",
+    "flagUrl": "assets/images/ifni.gif",
+    "isMissing": true,
+    "region": "Africa Occidental",
+    "capital": "Sidi Ifni",
+    "plateNumbers": [
+        {"plateYear": "1961", "dateFrom": "1958-01-01", "dateTo": "1961-12-31", "plateFrom": "1", "plateTo": "300"},
+        {"plateYear": "1965", "dateFrom": "1962-01-01", "dateTo": "1965-12-31", "plateFrom": "301", "plateTo": "800"},
+        {"plateYear": "1969", "dateFrom": "1966-01-01", "dateTo": "1969-12-31", "plateFrom": "801", "plateTo": "1200"}
+    ],
+    "relatedProvinces": [35, 38, 53],
+    "unitsPlates": 1200
+  },
+  {
+    "id": 55,
+    "name": "Fernando Poo",
+    "acronym": "TEG / FP",
+    "autonomy": "Golfo de Guinea",
+    "description": "Primera matriculació: 1929. Va canviar de TEG a FP el 1959 fins a la independència de Guinea Equatorial el 1968.",
+    "flagUrl": "assets/images/fernandopoo.jpg",
+    "isMissing": true,
+    "region": "Golfo de Guinea",
+    "capital": "Santa Isabel",
+    "plateNumbers": [
+        {"plateYear": "1963", "dateFrom": "1961-01-01", "dateTo": "1963-12-31", "plateFrom": "1", "plateTo": "1200"},
+        {"plateYear": "1966", "dateFrom": "1964-01-01", "dateTo": "1966-12-31", "plateFrom": "1201", "plateTo": "3000"},
+        {"plateYear": "1968", "dateFrom": "1967-01-01", "dateTo": "1968-12-31", "plateFrom": "3001", "plateTo": "4500"}
+    ],
+    "relatedProvinces": [56],
+    "unitsPlates": 4500
+  },
+  {
+    "id": 56,
+    "name": "Río Muni",
+    "acronym": "TEG / RM",
+    "autonomy": "Golfo de Guinea",
+    "description": "Primera matriculació: 1929. Va canviar de TEG a RM el 1959.",
+    "flagUrl": "assets/images/riomuni.gif",
+    "isMissing": true,
+    "region": "Golfo de Guinea",
+    "capital": "Bata",
+    "plateNumbers": [
+        {"plateYear": "1963", "dateFrom": "1961-01-01", "dateTo": "1963-12-31", "plateFrom": "1", "plateTo": "1000"},
+        {"plateYear": "1966", "dateFrom": "1964-01-01", "dateTo": "1966-12-31", "plateFrom": "1001", "plateTo": "2400"},
+        {"plateYear": "1968", "dateFrom": "1967-01-01", "dateTo": "1968-12-31", "plateFrom": "2401", "plateTo": "3200"}
+    ],
+    "relatedProvinces": [55],
+    "unitsPlates": 3200
+  }
+]
