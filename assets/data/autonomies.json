@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Andalucía",
-    "flagUrl": "assets/images/andalucía.png",
+    "flagUrl": "assets/images/andalucia.png",
     "flag": "🇪🇸",
     "coordinates": { "latitude": 37.3891, "longitude": -5.9845 },
     "dateFrom": "1982",
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "name": "Aragón",
-    "flagUrl": "assets/images/aragon.gif",
+    "flagUrl": "assets/images/aragon.png",
     "flag": "🇪🇸",
     "coordinates": { "latitude": 41.6488, "longitude": -0.8891 },
     "dateFrom": "1982",
@@ -20,7 +20,7 @@
   {
     "id": 3,
     "name": "Asturias",
-    "flagUrl": "assets/images/asturias.gif",
+    "flagUrl": "assets/images/asturias.png",
     "flag": "🇪🇸",
     "coordinates": { "latitude": 43.3603, "longitude": -5.8448 },
     "dateFrom": "1981",
@@ -29,7 +29,7 @@
   {
     "id": 4,
     "name": "Baleares",
-    "flagUrl": "assets/images/baleares.gif",
+    "flagUrl": "assets/images/baleares.png",
     "flag": "🇪🇸",
     "coordinates": { "latitude": 39.5696, "longitude": 2.6502 },
     "dateFrom": "1983",
@@ -38,7 +38,7 @@
   {
     "id": 5,
     "name": "Canarias",
-    "flagUrl": "assets/images/canarias.gif",
+    "flagUrl": "assets/images/canarias.png",
     "flag": "🇪🇸",
     "coordinates": { "latitude": 28.4636, "longitude": -16.2518 },
     "dateFrom": "1982",
@@ -47,7 +47,7 @@
   {
     "id": 6,
     "name": "Cantabria",
-    "flagUrl": "assets/images/cantabria.gif",
+    "flagUrl": "assets/images/cantabria.png",
     "flag": "🇪🇸",
     "coordinates": { "latitude": 43.4623, "longitude": -3.8099 },
     "dateFrom": "1981",
@@ -56,7 +56,7 @@
   {
     "id": 7,
     "name": "Castilla y León",
-    "flagUrl": "assets/images/castilla_leon.gif",
+    "flagUrl": "assets/images/castilla_leon.png",
     "flag": "🇪🇸",
     "coordinates": { "latitude": 41.6523, "longitude": -4.7245 },
     "dateFrom": "1983",
@@ -65,7 +65,7 @@
   {
     "id": 8,
     "name": "Castilla-La Mancha",
-    "flagUrl": "assets/images/castilla_la_mancha.gif",
+    "flagUrl": "assets/images/castilla_la_mancha.png",
     "flag": "🇪🇸",
     "coordinates": { "latitude": 39.8628, "longitude": -4.0273 },
     "dateFrom": "1982",
@@ -74,7 +74,7 @@
   {
     "id": 9,
     "name": "Cataluña",
-    "flagUrl": "assets/images/cataluna.gif",
+    "flagUrl": "assets/images/cataluna.png",
     "flag": "🇪🇸",
     "coordinates": { "latitude": 41.3851, "longitude": 2.1734 },
     "dateFrom": "1979",
@@ -92,7 +92,7 @@
   {
     "id": 11,
     "name": "Extremadura",
-    "flagUrl": "assets/images/extremadura.gif",
+    "flagUrl": "assets/images/extremadura.png",
     "flag": "🇪🇸",
     "coordinates": { "latitude": 38.9161, "longitude": -6.3437 },
     "dateFrom": "1983",
@@ -101,7 +101,7 @@
   {
     "id": 12,
     "name": "Galicia",
-    "flagUrl": "assets/images/galicia.gif",
+    "flagUrl": "assets/images/galicia.png",
     "flag": "🇪🇸",
     "coordinates": { "latitude": 42.8782, "longitude": -8.5448 },
     "dateFrom": "1981",
@@ -110,7 +110,7 @@
   {
     "id": 13,
     "name": "La Rioja",
-    "flagUrl": "assets/images/la_rioja.gif",
+    "flagUrl": "assets/images/la_rioja.png",
     "flag": "🇪🇸",
     "coordinates": { "latitude": 42.4627, "longitude": -2.4450 },
     "dateFrom": "1982",
@@ -119,7 +119,7 @@
   {
     "id": 14,
     "name": "Madrid",
-    "flagUrl": "assets/images/madrid.gif",
+    "flagUrl": "assets/images/madrid.png",
     "flag": "🇪🇸",
     "coordinates": { "latitude": 40.4168, "longitude": -3.7038 },
     "dateFrom": "1983",
@@ -128,7 +128,7 @@
   {
     "id": 15,
     "name": "Murcia",
-    "flagUrl": "assets/images/murcia.gif",
+    "flagUrl": "assets/images/murcia.png",
     "flag": "🇪🇸",
     "coordinates": { "latitude": 37.9922, "longitude": -1.1307 },
     "dateFrom": "1982",
@@ -137,7 +137,7 @@
   {
     "id": 16,
     "name": "Navarra",
-    "flagUrl": "assets/images/navarra.gif",
+    "flagUrl": "assets/images/navarra.png",
     "flag": "🇪🇸",
     "coordinates": { "latitude": 42.8125, "longitude": -1.6457 },
     "dateFrom": "1982",
@@ -146,7 +146,7 @@
   {
     "id": 17,
     "name": "País Vasco",
-    "flagUrl": "assets/images/pais_vasco.gif",
+    "flagUrl": "assets/images/pais_vasco.png",
     "flag": "🇪🇸",
     "coordinates": { "latitude": 42.8467, "longitude": -2.6716 },
     "dateFrom": "1979",
@@ -173,7 +173,7 @@
   {
     "id": 20,
     "name": "Africa Occidental",
-    "flagUrl": "assets/images/marruecos.gif",
+    "flagUrl": "assets/images/marruecos.png",
     "flag": "🇲🇦",
     "coordinates": { "latitude": 29.38, "longitude": -10.17 },
     "dateFrom": "1958",
@@ -182,7 +182,7 @@
   {
     "id": 21,
     "name": "Golfo de Guinea",
-    "flagUrl": "assets/images/guinea.gif",
+    "flagUrl": "assets/images/guinea.png",
     "flag": "🇬🇶",
     "coordinates": { "latitude": 3.75, "longitude": 8.78 },
     "dateFrom": "1959",
