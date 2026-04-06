@@ -1,105 +1,95 @@
-# Blueprint del Projecte: Matrícules Provincials
+# Blueprint de l'Aplicació de Matrícules
 
-## Visió General
-Aquesta aplicació és una guia de referència completa i interactiva per a les matrícules provincials i estatals d'Espanya. Permet als usuaris explorar la història de cada província a través de les seves matrícules, cercar informació específica, i visualitzar dades de manera geogràfica i cronològica. L'aplicació està dissenyada per a historiadors, aficionats als cotxes, i qualsevol persona interessada en la història automobilística d'Espanya.
+## **OVERVIEW**
 
-## Característiques Implementades
+Aquest document descriu el disseny, l'arquitectura i les funcionalitats de l'aplicació "Matricules", una eina per a consultar informació detallada sobre matrícules de vehicles a Espanya. L'objectiu és proporcionar una interfície intuïtiva i rica en dades per a explorar els diferents sistemes de matriculació que han existit.
 
-- **Catàleg de Províncies**:
-    - Graella visualment atractiva de totes les províncies espanyoles amb les seves banderes corresponents.
-    - **Cerca Dinàmica**: Cerca per nom de província, acrònim o capital en temps real.
-    - **Filtratge per Autonomia**: Filtra les províncies per comunitat autònoma mitjançant un menú desplegable i un mapa interactiu.
-    - **Ordenació Flexible**: Ordena la llista per nom, any d'implantació o per nombre d'unitats matriculades.
+## **PROJECT OUTLINE**
 
-- **Cerca per Matrícules**:
-    - **Cerca Nacional (Sistema 2000-Actualitat)**:
-        - Introdueix una matrícula del sistema actual (p. ex., `1234 ABC`) per obtenir una data de matriculació estimada.
-        - Mostra les matrícules provincials equivalents per a l'any de la matrícula cercada, amb un format clar i destacat.
-    - **Cerca Provincial (Sistema 1907-2000)**:
-        - **Validació Avançada per a Matrícules Alfanumèriques (1971-2000):**
-            - Implementació de regles de validació estrictes per al sistema alfanumèric provincial.
-            - Verificació del format de la matrícula (p. ex., `XX-0000-A` o `XX-0000-AB`).
-            - **Regles de validació per a combinacions de lletres:**
-                - **Una lletra:** No es fan servir les vocals, ni Ñ, Q, R.
-                - **Dues lletres:**
-                    - La primera lletra no pot ser Ñ, Q, R.
-                    - La segona lletra no pot ser A, E, I, O, Ñ, Q, R.
-                - La combinació "WC" no està permesa.
-            - Missatges d'error clars i informatius per a l'usuari.
+A continuació es detalla l'estructura de l'aplicació, incloent-hi l'estil, el disseny i les funcionalitats implementades.
 
-- **Pantalla de Detalls de la Província**:
-    - **Transició Hero**: Animació de la bandera de la província des de la llista fins a la pantalla de detalls.
-    - **Informació Completa**:
-        - Imatge de la bandera a pantalla completa.
-        - Descripció detallada sobre la història de la matriculació a la província.
-        - Dades clau: acrònims utilitzats, autonomia, capital, regió i total d'unitats.
-        - Secció de províncies limítrofes per a una navegació contextual.
-        - Llista de períodes de matriculació amb rangs de números de matrícula i dates.
+### **1. Estructura i Navegació**
 
-- **Eines Addicionals**:
-    - **Descodificador de VIN**: Una utilitat per a vehicles moderns que descodifica un Número d'Identificació del Vehicle (VIN) de 17 dígits per obtenir informació detallada.
-    - **Cerca per Bastidor (Històric)**: Eina per cercar informació sobre vehicles clàssics a partir del seu número de bastidor.
+*   **Pàgina Principal (`home_page.dart`)**:
+    *   Presenta una interfície clara amb dues opcions principals: "Matrícules Provincials" i "Matrícules Estatals".
+    *   Utilitza un `Scaffold` amb un `AppBar` que mostra el títol de l'aplicació.
+    *   El cos està centrat i conté dos botons elevats que condueixen a les respectives seccions de cerca.
+    *   Disseny responsiu que s'adapta a diferents mides de pantalla.
 
-- **Visualització Geogràfica**:
-    - **Mapa d'Autonomies**: Un mapa interactiu que apareix en filtrar per autonomia, destacant la regió seleccionada.
+*   **Sistema de Rutes (`go_router`)**:
+    *   S'ha implementat `go_router` per a gestionar la navegació de manera declarativa i robusta.
+    *   Les rutes definides són:
+        *   `/`: Pàgina principal.
+        *   `/provincial`: Llança el diàleg de cerca per a matrícules provincials.
+        *   `/estatal`: Llança el diàleg de cerca per a matrícules estatals.
+        *   `/vehicle-details`: Mostra detalls tècnics d'un vehicle (encara no implementat completament).
 
-- **Personalització i Usabilitat**:
-    - **Temes Clar i Fosc**: Suport complet per a temes clar i fosc.
-    - **Localització**: L'aplicació està completament localitzada en català (`ca`).
+### **2. Disseny i Experiència d'Usuari (UX)**
 
-- **Pantalla d'Informació**:
-    - Una secció "Quant a l'aplicació" que mostra informació rellevant sobre el projecte.
+*   **Tema Visual (`theme_provider.dart`)**:
+    *   S'utilitza `ColorScheme.fromSeed` amb `Colors.deepPurple` per a generar una paleta de colors moderna i consistent (Material 3).
+    *   Tipografia personalitzada amb `google_fonts`, utilitzant `Oswald` per a títols i `Roboto` per al cos del text, per a millorar la llegibilitat i l'estètica.
+    *   S'ha implementat un `ThemeProvider` (`provider`) per a permetre a l'usuari canviar entre els modes clar i fosc.
+    *   El tema defineix estils consistents per a `AppBar`, `ElevatedButton` i altres components.
 
-## Estil i Disseny (UI/UX)
+*   **Components d'Interfície**:
+    *   **Diàlegs de Cerca**: Es fan servir `AlertDialog` per a les cerques, la qual cosa permet una experiència d'usuari focalitzada sense canviar de pantalla.
+    *   **Iconografia**: S'han afegit icones informatives (`Icons.info_outline`) per a oferir a l'usuari ajuda contextual sobre els formats de matrícula.
+    *   **Feedback a l'Usuari**: S'utilitzen `CircularProgressIndicator` per a indicar estats de càrrega i `errorText` als camps de text per a mostrar missatges d'error clars.
+    *   **Imatges i Actius**: S'han inclòs banderes (`espana.png`, banderes de comunitats autònomes) per a enriquir visualment la informació presentada.
 
-- **Tipografia**: `Google Fonts` s'utilitza per a una estètica moderna i llegible:
-    - **Títols**: `Exo 2` per a una aparença tècnica.
-    - **Text del Cos**: `Lato` per a una llegibilitat òptima.
-- **Paleta de Colors**:
-    - **Color Primari**: Blau fosc (`#001e50`).
-    - **Esquema de Colors**: Generat amb `ColorScheme.fromSeed` per a consistència en temes clar i fosc.
-- **Components Visuals**:
-    - **Targetes (`Card`)**: Per agrupar informació de manera clara i amb profunditat visual.
-    - **Consistència**: Disseny coherent a tota l'aplicació mitjançant temes centralitzats.
-    - **`RichText`**: S'utilitza per a una presentació de dades més rica i amb format, com en el cas de les matrícules provincials equivalents.
+### **3. Lògica del Negoci i Gestió de Dades**
 
-## Estructura i Arquitectura del Projecte
+*   **Gestió d'Estat (`provider`)**:
+    *   `ModelProvider`: Carrega i gestiona les dades de les matrícules des d'un fitxer `assets/matricules.csv`. Conté la lògica principal per a cercar i processar la informació.
+    *   `ThemeProvider`: Gestiona l'estat del tema (clar/fosc).
 
-- **Gestió d'Estat**: `provider` per a la gestió de l'estat global (`ThemeProvider`, `ModelProvider`).
-- **Navegació**: `go_router` per a una navegació declarativa i robusta.
-- **Estructura de Fitxers**:
-    - `lib/`
-        - `main.dart`: Punt d'entrada i configuració general.
-        - `models/`: Classes de dades (`MatriculaModel`, `StatePlateData`).
-        - `providers/`: Gestors d'estat (`ModelProvider`).
-        - `services/`: Lògica de negoci i càrrega de dades.
-        - `screens/`: Pantalles de l'aplicació.
-        - `widgets/`: Components reutilitzables.
-    - `assets/`
-        - `data/`: Fitxers de dades en format JSON (`db_*.json`).
-        - `images/`: Banderes de les províncies.
-- `pubspec.yaml`: Definició de dependències i actius.
-- `blueprint.md`: Aquest fitxer.
+*   **Serveis Externs**:
+    *   `DgtService`: Servei per a interactuar amb la web de la DGT i obtenir el distintiu ambiental d'un vehicle a partir de la seva matrícula.
+    *   `PlateApiService`: Servei (futur) per a obtenir detalls tècnics avançats d'un vehicle.
 
-## Pla de Desenvolupament Actual
+*   **Models de Dades**:
+    *   Les dades es processen des d'un fitxer CSV i es converteixen en mapes de `String` a `dynamic` per a facilitar-ne la manipulació i presentació.
 
-### Reconeixement de Matrícules per Imatge
+### **4. Funcionalitats Clau Implementades**
 
-S'implementarà una nova funcionalitat per permetre als usuaris reconèixer una matrícula a partir d'una fotografia feta amb la càmera o seleccionada des de la galeria.
+*   **Cerca de Matrícules Provincials (`provincial_plate_search_dialog.dart`)**:
+    *   Permet a l'usuari introduir una matrícula provincial (ex: "B 1234 AB").
+    *   Valida el format de la matrícula.
+    *   Mostra informació detallada: any de matriculació, província, i la matrícula estatal equivalent si escau.
 
-1.  **Integració de Dependències**:
-    *   S'afegirà `image_picker` per permetre la selecció d'imatges.
-    *   S'afegirà `google_ml_kit_text_recognition` per realitzar el Reconeixement Òptic de Caràcters (OCR) sobre la imatge.
+*   **Cerca de Matrícules Estatals (`state_plate_search_dialog.dart`)**:
+    *   Permet introduir una matrícula del sistema modern (ex: "1234 ABC").
+    *   Mostra l'any de matriculació i la data aproximada.
+    *   Calcula i mostra una llista de les matrícules provincials equivalents per a aquell any.
+    *   **Consulta del Distintiu Ambiental**:
+        *   Després d'una cerca, contacta amb el servei de la DGT per a obtenir i mostrar la imatge del distintiu ambiental corresponent.
 
-2.  **Interfície d'Usuari (UI)**:
-    *   S'afegirà un botó d'acció flotant (`FloatingActionButton`) o una icona a la barra de cerca per iniciar el procés.
+*   **Funcionalitat "Secreta" / Oculta**:
+    *   Al diàleg de cerca estatal, si l'usuari toca la bandera d'Espanya 7 vegades, apareix un botó per a consultar detalls tècnics addicionals del vehicle, fent ús del `PlateApiService`.
 
-3.  **Lògica de Reconeixement**:
-    *   Es crearà una funció per gestionar el flux de selecció d'imatge (càmera o galeria).
-    *   La imatge seleccionada serà processada pel servei de reconeixement de text.
-    *   S'aplicarà un filtre sobre el text extret per identificar patrons que coincideixin amb formats de matrícules espanyoles (provincials i estatals).
+### **5. Millores de Qualitat i Arquitectura**
 
-4.  **Diàleg de Verificació i Correcció**:
-    *   Un cop identificada una matrícula potencial, es mostrarà un diàleg emergent a l'usuari.
-    *   Aquest diàleg contindrà un camp de text (`TextField`) pre-omplert amb la matrícula reconeguda, permetent a l'usuari verificar-la i corregir-la si és necessari.
-    *   En confirmar, la matrícula (ja verificada) s'enviarà al servei de cerca existent per mostrar-ne els detalls.
+*   **Càrrega de dades optimitzada**: El fitxer CSV es llegeix una sola vegada a l'inici de l'aplicació i es manté en memòria amb el `ModelProvider`, evitant lectures repetides.
+*   **Separació de Responsabilitats**: El codi està organitzat en serveis (per a la lògica d'API), proveïdors (per a la gestió de l'estat), widgets (per a la interfície) i models.
+*   **Format de Data i Números**: S'utilitza el paquet `intl` per a formatar les dates i els números segons les convencions locals (`es_ES`), millorant l'experiència de l'usuari.
+
+---
+
+## **PLAN ACTUAL: Depuració Servei DGT i Gestió de CORS**
+
+En aquesta darrera fase, s'ha abordat un problema crític que impedia obtenir el distintiu ambiental de la DGT quan l'aplicació s'executava en un navegador web.
+
+**Canvis i Millores:**
+
+*   **Identificació del Problema**: Es va detectar que les peticions directes des del client web al servidor de la `sede.dgt.gob.es` eren bloquejades pel navegador a causa de la **política del mateix origen (Same-Origin Policy)**, resultant en un error de **CORS**.
+*   **Intents de Solució amb Proxies**:
+    1.  Es va implementar un primer proxy (`corsproxy.io`). Aquesta solució va ser descartada perquè el servei gratuït limita el seu ús a entorns de no producció.
+    2.  Es van provar altres proxies públics (`api.allorigins.win`, `thingproxy.freeboard.io`), però van resultar inestables o eren bloquejats directament pel servidor de la DGT, retornant errors `520`.
+*   **Decisió Final (a petició de l'usuari)**:
+    *   S'ha **eliminat tota la lògica de proxies** del `DgtService`.
+    *   L'aplicació ara realitza les peticions directament a la DGT.
+*   **Conseqüències i Estat Actual**:
+    *   **Plataformes Mòbils (iOS/Android)**: La funcionalitat de consulta del distintiu ambiental hauria de funcionar correctament, ja que les aplicacions natives no estan subjectes a les mateixes restriccions CORS que els navegadors.
+    *   **Plataforma Web**: Aquesta funcionalitat **no operarà correctament a la web**. L'error de CORS és esperat en aquest entorn a causa de la configuració de seguretat del servidor de la DGT, que no permet peticions `cross-origin` des de navegadors.
+*   **Neteja de Codi**: S'han eliminat imports no utilitzats i s'ha refactoritzat el `DgtService` per a simplificar-lo després de llevar els proxies.
