@@ -182,9 +182,8 @@ class ModelProvider with ChangeNotifier {
     final acronym = match.group(1)!;
     final platePart = match.group(2)!;
 
-    // --- User Input Validation for Alphanumeric plates ---
-    final isNumeric = int.tryParse(platePart) == null ? false : true;
-    if (!isNumeric) {
+    final isInputNumeric = int.tryParse(platePart) != null;
+    if (!isInputNumeric) {
       final alphanumericRegex = RegExp(r'^(\d{4})([A-Z]{1,2})$');
       final alphanumericMatch = alphanumericRegex.firstMatch(platePart);
       if (alphanumericMatch == null) {
@@ -224,30 +223,32 @@ class ModelProvider with ChangeNotifier {
         return {'error': 'Acrònim de província "$acronym" no trobat.'};
     }
 
-    // --- Binary Search Implementation ---
+    num maxNumericValue = 0;
+    final numericRanges = foundModel.plateNumbers.where((range) => int.tryParse(range.plateFrom ?? '') != null);
+    final lastNumericRange = numericRanges.isEmpty ? null : numericRanges.last;
+    
+    if (lastNumericRange != null && lastNumericRange.plateTo != null) {
+        maxNumericValue = int.parse(lastNumericRange.plateTo!);
+    }
+
     final plateRanges = foundModel.plateNumbers;
     int min = 0;
     int max = plateRanges.length - 1;
-    final plateValue = _getComparableValue(platePart);
+    final plateValue = _getComparableValue(platePart, maxNumericValue);
 
     while (min <= max) {
         int mid = min + ((max - min) >> 1);
         final version = plateRanges[mid];
-
         final plateFrom = version.plateFrom;
         final plateTo = version.plateTo;
 
         if (plateFrom == null || plateTo == null) {
-            if (plateValue < _getComparableValue(plateFrom ?? '0')) {
-                max = mid - 1;
-            } else {
-                min = mid + 1;
-            }
+            max = mid -1;
             continue;
         }
 
-        final fromValue = _getComparableValue(plateFrom);
-        final toValue = _getComparableValue(plateTo);
+        final fromValue = _getComparableValue(plateFrom, maxNumericValue);
+        final toValue = _getComparableValue(plateTo, maxNumericValue);
 
         if (plateValue >= fromValue && plateValue <= toValue) {
             return _createPlateSearchResult(foundModel, version, plateValue.toDouble(), fromValue.toDouble(), toValue.toDouble());
@@ -263,28 +264,21 @@ class ModelProvider with ChangeNotifier {
     return {'error': 'Matrícula no trobada en els rangs per a ${foundModel.name}.'};
 }
 
-num _getComparableValue(String plate) {
+num _getComparableValue(String plate, num alphanumericOffset) {
     final isNumeric = int.tryParse(plate) != null;
     if (isNumeric) {
         return int.parse(plate);
     } else {
-        try {
-            return _getAlphanumericValue(plate);
-        } catch(e) {
-            return -1; // Should not happen with validated input, but as a safeguard
-        }
+        return _getAlphanumericValue(plate, alphanumericOffset);
     }
 }
 
-// This function should be robust and not throw exceptions for invalid letters,
-// as it's used for internal data as well as user input.
-// The user-facing validation is handled in `searchByProvincialPlate`.
-int _getAlphanumericValue(String plate) {
+int _getAlphanumericValue(String plate, num offset) {
     final regex = RegExp(r'^(\d*)?([A-Z]{1,2})$');
     final match = regex.firstMatch(plate.toUpperCase());
 
     if (match == null) {
-      return -1; // Invalid format
+      return -1;
     }
 
     final numberPartStr = match.group(1);
@@ -301,17 +295,13 @@ int _getAlphanumericValue(String plate) {
         final second = alphabet.indexOf(letterPart[1]);
         if (first == -1 || second == -1) return -1;
 
-        // Make sure 2-letter values are always greater than 1-letter values
-        const offset = alphabet.length;
-        letterValue = offset + (first * alphabet.length) + second;
-    } else {
-        return -1; // Should not happen due to regex
+        const letterOffset = alphabet.length;
+        letterValue = letterOffset + (first * alphabet.length) + second;
     }
-    
+
     if (letterValue == -1) return -1;
-    
-    // Combine letter value and number part for a final comparable value
-    return (letterValue * 10000) + numberPart;
+
+    return offset.toInt() + (letterValue * 10000) + numberPart;
 }
 
   Map<String, dynamic> _createPlateSearchResult(

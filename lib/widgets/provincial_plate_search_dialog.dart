@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:matricules/providers/model_provider.dart';
+import 'package:matricules/services/plate_api_service.dart';
+import 'package:matricules/widgets/vehicle_details_dialog.dart'; // Canvi aquí
 
 class ProvincialPlateSearchDialog extends StatefulWidget {
   final String? initialValue;
@@ -14,6 +16,8 @@ class _ProvincialPlateSearchDialogState extends State<ProvincialPlateSearchDialo
   final _plateNumberController = TextEditingController();
   Map<String, dynamic>? _searchResultData;
   String? _errorText;
+  int _flagClickCount = 0;
+  bool _showDetailsButton = false;
 
   @override
   void initState() {
@@ -37,6 +41,8 @@ class _ProvincialPlateSearchDialogState extends State<ProvincialPlateSearchDialo
       setState(() {
         _searchResultData = result;
         _errorText = null;
+        _flagClickCount = 0;
+        _showDetailsButton = false;
       });
     }
   }
@@ -69,6 +75,40 @@ La sigla provincial, quatre números i una o dues lletres al final (p. ex., M 12
         ],
       ),
     );
+  }
+
+  void _handleViewDetails() async {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => const Center(child: CircularProgressIndicator()),
+    );
+
+    final details = await PlateApiService().fetchDetails(_plateNumberController.text);
+
+    if (!mounted) return;
+
+    Navigator.pop(context);
+
+    if (details != null) {
+      showDialog(
+        context: context,
+        builder: (context) => VehicleDetailsDialog(data: details), // Canvi aquí
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('No s\'han trobat detalls per a aquesta matrícula.')),
+      );
+    }
+  }
+
+  void _onFlagTapped() {
+    setState(() {
+      _flagClickCount++;
+      if (_flagClickCount >= 7) {
+        _showDetailsButton = true;
+      }
+    });
   }
 
   @override
@@ -111,12 +151,15 @@ La sigla provincial, quatre números i una o dues lletres al final (p. ex., M 12
                     if (_searchResultData!['flagUrl'] != null)
                       Padding(
                         padding: const EdgeInsets.only(bottom: 20.0),
-                        child: Image.asset(
-                          _searchResultData!['flagUrl'],
-                          height: 100,
-                          width: 150,
-                          fit: BoxFit.cover,
-                          errorBuilder: (context, error, stackTrace) => const Icon(Icons.error),
+                        child: GestureDetector(
+                          onTap: _onFlagTapped,
+                          child: Image.asset(
+                            _searchResultData!['flagUrl'],
+                            height: 100,
+                            width: 150,
+                            fit: BoxFit.cover,
+                            errorBuilder: (context, error, stackTrace) => const Icon(Icons.error),
+                          ),
                         ),
                       ),
                     ..._searchResultData!.entries.map((entry) {
@@ -178,6 +221,14 @@ La sigla provincial, quatre números i una o dues lletres al final (p. ex., M 12
           onPressed: _searchPlate,
           child: const Text('Cercar'),
         ),
+        if (_searchResultData != null && _showDetailsButton) ...[
+          const SizedBox(height: 20),
+          ElevatedButton.icon(
+            onPressed: _handleViewDetails,
+            icon: const Icon(Icons.directions_car),
+            label: const Text('Veure detalls tècnics'),
+          ),
+          ]
       ],
     );
   }

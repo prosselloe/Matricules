@@ -1,7 +1,11 @@
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' as intl;
 import 'package:provider/provider.dart';
 import 'package:matricules/providers/model_provider.dart';
+import 'package:matricules/services/plate_api_service.dart';
+import 'package:matricules/widgets/vehicle_details_dialog.dart';
+import 'package:matricules/services/dgt_service.dart';
 
 class StatePlateSearchDialog extends StatefulWidget {
   final String? initialValue;
@@ -15,6 +19,10 @@ class _StatePlateSearchDialogState extends State<StatePlateSearchDialog> {
   final _plateNumberController = TextEditingController();
   Map<String, dynamic>? _searchResultData;
   String? _errorText;
+  int _flagClickCount = 0;
+  bool _showDetailsButton = false;
+  String? _stickerUrl;
+  bool _isLoading = false;
 
   @override
   void initState() {
@@ -25,19 +33,35 @@ class _StatePlateSearchDialogState extends State<StatePlateSearchDialog> {
     }
   }
 
-  void _searchPlate() {
+  void _searchPlate() async {
+    FocusScope.of(context).unfocus();
+
+    setState(() {
+      _isLoading = true;
+      _errorText = null;
+      _searchResultData = null;
+      _stickerUrl = null;
+    });
+
     final modelProvider = Provider.of<ModelProvider>(context, listen: false);
     final result = modelProvider.searchByNationalPlate(_plateNumberController.text.trim());
 
     if (result.containsKey('error')) {
+      if (!mounted) return;
       setState(() {
-        _searchResultData = null;
         _errorText = result['error'];
+        _isLoading = false;
       });
     } else {
+      final stickerUrl = await DgtService().getEnvironmentalStickerUrl(_plateNumberController.text.trim());
+      if (!mounted) return;
       setState(() {
         _searchResultData = result;
+        _stickerUrl = stickerUrl;
         _errorText = null;
+        _isLoading = false;
+        _flagClickCount = 0;
+        _showDetailsButton = false;
       });
     }
   }
@@ -72,6 +96,40 @@ les consonants, excloent la Ñ i la Q per evitar confusions. La primera combinac
     );
   }
 
+  void _handleViewDetails() async {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => const Center(child: CircularProgressIndicator()),
+    );
+
+    final details = await PlateApiService().fetchDetails(_plateNumberController.text);
+
+    if (!mounted) return;
+
+    Navigator.pop(context);
+
+    if (details != null) {
+      showDialog(
+        context: context,
+        builder: (context) => VehicleDetailsDialog(data: details),
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('No s\'han trobat detalls per a aquesta matrícula.')),
+      );
+    }
+  }
+
+  void _onFlagTapped() {
+    setState(() {
+      _flagClickCount++;
+      if (_flagClickCount >= 7) {
+        _showDetailsButton = true;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final numberFormatter = intl.NumberFormat('#,##0', 'es_ES');
@@ -103,16 +161,41 @@ les consonants, excloent la Ñ i la Q per evitar confusions. La primera combinac
                 hintText: 'Introdueix la matrícula',
                 errorText: _errorText,
               ),
+              onSubmitted: (_) => _searchPlate(),
               keyboardType: TextInputType.text,
             ),
             const SizedBox(height: 20),
             Center(
-              child: Image.asset(
-                'assets/images/spain.png',
-                height: 80,
-                fit: BoxFit.contain,
+              child: GestureDetector(
+                onTap: _onFlagTapped,
+                child: Image.asset(
+                  'assets/images/espana.png',
+                  height: 80,
+                  fit: BoxFit.contain,
+                ),
               ),
             ),
+            if (_isLoading)
+              const Padding(
+                padding: EdgeInsets.only(top: 20.0),
+                child: Center(child: CircularProgressIndicator()),
+              ),
+            if (_stickerUrl != null)
+              Padding(
+                padding: const EdgeInsets.only(top: 20.0),
+                child: Center(
+                  child: Image.network(
+                    _stickerUrl!,
+                    height: 100,
+                    loadingBuilder: (BuildContext context, Widget child, ImageChunkEvent? loadingProgress) {
+                      if (loadingProgress == null) return child;
+                      return const Center(child: CircularProgressIndicator());
+                    },
+                    errorBuilder: (context, error, stackTrace) =>
+                        const Text('No s\'ha pogut carregar el distintiu.'),
+                  ),
+                ),
+              ),
             if (_searchResultData != null)
               Padding(
                 padding: const EdgeInsets.only(top: 20.0),
@@ -204,9 +287,17 @@ les consonants, excloent la Ñ i la Q per evitar confusions. La primera combinac
           child: const Text('Tancar'),
         ),
         ElevatedButton(
-          onPressed: _searchPlate,
+          onPressed: _isLoading ? null : _searchPlate,
           child: const Text('Cercar'),
         ),
+        if (_searchResultData != null && _showDetailsButton) ...[
+          const SizedBox(height: 20),
+          ElevatedButton.icon(
+            onPressed: _handleViewDetails,
+            icon: const Icon(Icons.directions_car),
+            label: const Text('Veure detalls tècnics'),
+          ),
+          ]
       ],
     );
   }
