@@ -1,87 +1,113 @@
-
 {
   "last_letters": [
     {"year": 2026, "months": { 
-      "Ene": "NKH", "Feb": "NLB", "Mar": "NLZ", "Abr": "N/A", "May": "N/A", "Jun": "N/A", 
-      "Jul": "N/A", "Ago": "N/A", "Sep": "N/A", "Oct": "N/A", "Nov": "N/A", "Dic": "N/A" }},
+      "Ene": "9999NKH", "Feb": "9999NLB", "Mar": "9999NLZ", "Abr": "N/A", 
+      "May": "N/A", "Jun": "N/A", "Jul": "N/A", "Ago": "N/A", 
+      "Sep": "N/A", "Oct": "N/A", "Nov": "N/A", "Dic": "N/A" }},
     {"year": 2025, "months": { 
-      "Ene": "MYF", "Feb": "MYW", "Mar": "MZS", "Abr": "NBL", "May": "NCJ", "Jun": "NDG", 
-      "Jul": "NFC", "Ago": "NFR", "Sep": "NGJ", "Oct": "NHD", "Nov": "NHX", "Dic": "NJS" }},
+      "Ene": "0002MYF", "Feb": "7135MYW", "Mar": "6294MZS", "Abr": "9293NBL", 
+      "May": "9999NCJ", "Jun": "9999NDG", "Jul": "9999NFC", "Ago": "9999NFR", 
+      "Sep": "9999NGJ", "Oct": "9999NHD", "Nov": "9999NHX", "Dic": "9999NJS" }},
     {"year": 2024, "months": { 
-      "Ene": "MNC", "Feb": "MNT", "Mar": "MPL", "Abr": "MRD", "May": "MRX", "Jun": "MSS", 
-      "Jul": "MTK", "Ago": "MTW", "Sep": "MVL", "Oct": "MWD", "Nov": "MWV", "Dic": "MXP" }},
+      "Ene": "5042MNC", "Feb": "1769MNT", "Mar": "3052MPL", "Abr": "7563MRD", 
+      "May": "6669MRX", "Jun": "3538MSS", "Jul": "2921MTK", "Ago": "3171MTW", 
+      "Sep": "5263MVL", "Oct": "5162MWD", "Nov": "6620MWV", "Dic": "3926MXP" }},
     {"year": 2023, "months": { 
-      "Ene": "MDS", "Feb": "MFG", "Mar": "MFZ", "Abr": "MGN", "May": "MHG", "Jun": "MJB", 
-      "Jul": "MJR", "Ago": "MKD", "Sep": "MKR", "Oct": "MLH", "Nov": "MLY", "Dic": "MMN" }},
+      "Ene": "4070MDS", "Feb": "5023MFG", "Mar": "2498MFZ", "Abr": "6239MGN", 
+      "May": "6892MHG", "Jun": "0029MJB", "Jul": "9112MJR", "Ago": "2530MKD", 
+      "Sep": "7439MKR", "Oct": "9961MLH", "Nov": "6151MLY", "Dic": "7263MMN" }},
     {"year": 2022, "months": { 
-      "Ene": "LWD", "Feb": "LWR", "Mar": "LXD", "Abr": "LXS", "May": "LYJ", "Jun": "LYZ", 
-      "Jul": "LZP", "Ago": "LZZ", "Sep": "MBN", "Oct": "MCB", "Nov": "MCR", "Dic": "MDF" }},
+      "Ene": "5690LWD", "Feb": "3884LWR", "Mar": "4654LXD", "Abr": "0823LXS", 
+      "May": "1223LYJ", "Jun": "5580LYZ", "Jul": "0495LZP", "Ago": "5897LZZ", 
+      "Sep": "3317MBN", "Oct": "8504MCB", "Nov": "2084MCR", "Dic": "3366MDF" }},
     {"year": 2021, "months": { 
-      "Ene": "LML", "Feb": "LMX", "Mar": "LNN", "Abr": "LPD", "May": "LPW", "Jun": "LRP", 
-      "Jul": "LSG", "Ago": "LSR", "Sep": "LTD", "Oct": "LTP", "Nov": "LVD", "Dic": "LVV" }},
+      "Ene": "4048LML", "Feb": "6263LMX", "Mar": "7312LNN", "Abr": "7247LPD", 
+      "May": "6406LPW", "Jun": "0088LRP", "Jul": "2889LSG", "Ago": "1076LSR", 
+      "Sep": "1624LTD", "Oct": "9819LTP", "Nov": "6587LVD", "Dic": "1496LVV" }},
     {"year": 2020, "months": { 
-      "Ene": "LFH", "Feb": "LFY", "Mar": "LGG", "Abr": "LGH", "May": "LGP", "Jun": "LHG", 
-      "Jul": "LJD", "Ago": "LJR", "Sep": "LKF", "Oct": "LKV", "Nov": "LLJ", "Dic": "LMC" }},
+      "Ene": "2779LFH", "Feb": "8425LFY", "Mar": "7506LGG", "Abr": "5776LGH", 
+      "May": "2373LGP", "Jun": "3977LHG", "Jul": "0167LJD", "Ago": "3041LJR", 
+      "Sep": "5609LKF", "Oct": "3072LKV", "Nov": "7691LLJ", "Dic": "5114LMC" }},
     {"year": 2019, "months": { 
-      "Ene": "KTJ", "Feb": "KVB", "Mar": "KVX", "Abr": "KWT", "May": "KXR", "Jun": "KYN", 
-      "Jul": "KZK", "Ago": "KZY", "Sep": "LBN", "Oct": "LCG", "Nov": "LCY", "Dic": "LDR" }},
+      "Ene": "7164KTJ", "Feb": "6728KVB", "Mar": "6823KVX", "Abr": "3446KWT", 
+      "May": "1419KXR", "Jun": "3283KYN", "Jul": "2757KZK", "Ago": "4186KZY", 
+      "Sep": "5229LBN", "Oct": "8407LCG", "Nov": "4936LCY", "Dic": "8220LDR" }},
     {"year": 2018, "months": { 
-      "Ene": "KHG", "Feb": "KHY", "Mar": "KJV", "Abr": "KKR", "May": "KLN", "Jun": "KMM", 
-      "Jul": "KNK", "Ago": "KPD", "Sep": "KPS", "Oct": "KRJ", "Nov": "KRZ", "Dic": "KSS" }},
+      "Ene": "0765KHG", "Feb": "9175KHY", "Mar": "9691KJV", "Abr": "0032KKR", 
+      "May": "5088KLN", "Jun": "7728KMM", "Jul": "7469KNK", "Ago": "3160KPD", 
+      "Sep": "1288KPS", "Oct": "5823KRJ", "Nov": "7030KRZ", "Dic": "3650KSS" }},
     {"year": 2017, "months": { 
-      "Ene": "JWN", "Feb": "JXF", "Mar": "JYB", "Abr": "JYT", "May": "JZP", "Jun": "KBM", 
-      "Jul": "KCH", "Ago": "KCV", "Sep": "KDK", "Oct": "KFC", "Nov": "KFW", "Dic": "KGN" }},
+      "Ene": "7900JWN", "Feb": "7983JXF", "Mar": "6590JYB", "Abr": "4568JYT", 
+      "May": "5826JZP", "Jun": "5020KBM", "Jul": "0097KCH", "Ago": "5893KCV", 
+      "Sep": "7567KDK", "Oct": "4808KFC", "Nov": "1845KFW", "Dic": "0687KGN" }},
     {"year": 2016, "months": { 
-      "Ene": "JLN", "Feb": "JMF", "Mar": "JMY", "Abr": "JNR", "May": "JPK", "Jun": "JRG", 
-      "Jul": "JRZ", "Ago": "JSL", "Sep": "JTB", "Oct": "JTR", "Nov": "JVH", "Dic": "JVZ" }},
+      "Ene": "4256JLN", "Feb": "4150JMF", "Mar": "2240JMY", "Abr": "0907JNR", 
+      "May": "3462JPK", "Jun": "2509JRG", "Jul": "0646JRZ", "Ago": "4472JSL", 
+      "Sep": "2414JTB", "Oct": "2725JTR", "Nov": "3847JVH", "Dic": "2986JVZ" }},
     {"year": 2015, "months": { 
-      "Ene": "JCK", "Feb": "JCY", "Mar": "JDR", "Abr": "JFG", "May": "JFX", "Jun": "JGR", 
-      "Jul": "JHJ", "Ago": "JHT", "Sep": "JJH", "Oct": "JJW", "Nov": "JKK", "Dic": "JKZ" }},
+      "Ene": "0402JCK", "Feb": "1454JCY", "Mar": "7955JDR", "Abr": "1892JFG", 
+      "May": "0100JFX", "Jun": "0327JGR", "Jul": "5033JHJ", "Ago": "6705JHT",
+      "Sep": "0410JJH", "Oct": "6761JJW", "Nov": "9862JKK", "Dic": "9874JKZ" }},
     {"year": 2014, "months": { 
-      "Ene": "HVN", "Feb": "HVZ", "Mar": "HWM", "Abr": "HWY", "May": "HXN", "Jun": "HYD", 
-      "Jul": "HYT", "Ago": "HZB", "Sep": "HZL", "Oct": "HZZ", "Nov": "JBL", "Dic": "JBY" }},
+      "Ene": "2881HVN", "Feb": "0909HVZ", "Mar": "3816HWM", "Abr": "0049HXB", 
+      "May": "9245HXN", "Jun": "6108HYD", "Jul": "0768HYT", "Ago": "4872HZB", 
+      "Sep": "6484HZL", "Oct": "3987HZZ", "Nov": "2431JBL", "Dic": "0077JBY" }},
     {"year": 2013, "months": { 
-      "Ene": "HNT", "Feb": "HPC", "Mar": "HPN", "Abr": "HPY", "May": "HRK", "Jun": "HRX", 
-      "Jul": "HSK", "Ago": "HSR", "Sep": "HSZ", "Oct": "HTK", "Nov": "HTV", "Dic": "HVF" }},
+      "Ene": "0994HNT", "Feb": "3681HPC", "Mar": "3671HPN", "Abr": "5848HPY", 
+      "May": "7469HRK", "Jun": "3651HRX", "Jul": "4223HSK", "Ago": "0421HSS", 
+      "Sep": "4851HSZ", "Oct": "9158HTK", "Nov": "3283HTV", "Dic": "1481HVF" }},
     {"year": 2012, "months": { 
-      "Ene": "HJC", "Feb": "HJM", "Mar": "HKB", "Abr": "HKL", "May": "HKX", "Jun": "HLK", 
-      "Jul": "HLW", "Ago": "HMD", "Sep": "HML", "Oct": "HMT", "Nov": "HNC", "Dic": "HNK" }},
+      "Ene": "6656HJC", "Feb": "8733HJM", "Mar": "6052HKB", "Abr": "1066HKL", 
+      "May": "5749HKX", "Jun": "2863HLK", "Jul": "2263HLW", "Ago": "9979HMD", 
+      "Sep": "2822HML", "Oct": "7453HMT", "Nov": "1971HNC", "Dic": "6667HNK" }},
     {"year": 2011, "months": { 
-      "Ene": "HBP", "Feb": "HCB", "Mar": "HCR", "Abr": "HDC", "May": "HDR", "Jun": "HFF", 
-      "Jul": "HFT", "Ago": "HGC", "Sep": "HGM", "Oct": "HGX", "Nov": "HHH", "Dic": "HHT" }},
+      "Ene": "3902HBP", "Feb": "2355HCB", "Mar": "0126HCR", "Abr": "7410HDC", 
+      "May": "4434HDR", "Jun": "8856HFF", "Jul": "6720HFT", "Ago": "3618HGC", 
+      "Sep": "3513HGM", "Oct": "1634HGX", "Nov": "9121HHH", "Dic": "5354HHT" }},
     {"year": 2010, "months": { 
-      "Ene": "GTC", "Feb": "GTS", "Mar": "GVM", "Abr": "GWC", "May": "GWV", "Jun": "GXP", 
-      "Jul": "GYD", "Ago": "GYM", "Sep": "GYX", "Oct": "GZJ", "Nov": "GZT", "Dic": "HBG" }},
+      "Ene": "9629GTC", "Feb": "5738GTS", "Mar": "2900GVM", "Abr": "7669GWC", 
+      "May": "3166GWV", "Jun": "3138GXP", "Jul": "6536GYD", "Ago": "1532GYM", 
+      "Sep": "3091GYX", "Oct": "0401GZJ", "Nov": "9044GZT", "Dic": "1048HBG" }},
     {"year": 2009, "months": { 
-      "Ene": "GKS", "Feb": "GLC", "Mar": "GLP", "Abr": "GMC", "May": "GMN", "Jun": "GNF", 
-      "Jul": "GNY", "Ago": "GPJ", "Sep": "GPW", "Oct": "GRM", "Nov": "GSC", "Dic": "GSR" }},
+      "Ene": "4383GKS", "Feb": "7185GLC", "Mar": "9879GLP", "Abr": "2508GMC", 
+      "May": "9809GMN", "Jun": "8771GNF", "Jul": "3626GNY", "Ago": "4877GPJ", 
+      "Sep": "9050GPW", "Oct": "7528GRM", "Nov": "1588GSC", "Dic": "8384GSR" }},
     {"year": 2008, "months": { 
-      "Ene": "FZR", "Feb": "GBN", "Mar": "GCK", "Abr": "GDH", "May": "GFC", "Jun": "GFY", 
-      "Jul": "GGV", "Ago": "GHG", "Sep": "GHT", "Oct": "GJJ", "Nov": "GJV", "Dic": "GKH" }},
+      "Ene": "9610FZR", "Feb": "1153GBN", "Mar": "2101GCK", "Abr": "2298GDH", 
+      "May": "8201GFC", "Jun": "0695GFY", "Jul": "7106GGV", "Ago": "8157GHG", 
+      "Sep": "7891GHT", "Oct": "1517GJJ", "Nov": "1647GJV", "Dic": "5062GKH" }},
     {"year": 2007, "months": { 
-      "Ene": "FKY", "Feb": "FLV", "Mar": "FNB", "Abr": "FNZ", "May": "FRC", "Jun": "FSJ", 
-      "Jul": "FTP", "Ago": "FVJ", "Sep": "FWC", "Oct": "FXB", "Nov": "FXY", "Dic": "FYY" }},
+      "Ene": "3949FKY", "Feb": "9188FLV", "Mar": "7446FNB", "Abr": "0586FNZ", 
+      "May": "9596FRC", "Jun": "3693FSJ", "Jul": "2263FTP", "Ago": "7285FVJ", 
+      "Sep": "5369FWC", "Oct": "5989FXB", "Nov": "6382FXY", "Dic": "2265FYY" }},
     {"year": 2006, "months": { 
-      "Ene": "DVW", "Feb": "DWT", "Mar": "DXZ", "Abr": "DYY", "May": "FBC", "Jun": "FCJ", 
-      "Jul": "FDP", "Ago": "FFK", "Sep": "FGF", "Oct": "FHD", "Nov": "FJD", "Dic": "FKC" }},
+      "Ene": "8319DVW", "Feb": "9757DWT", "Mar": "7647DXZ", "Abr": "8793DYY", 
+      "May": "8717FBC", "Jun": "8944FCJ", "Jul": "2356FDP", "Ago": "2904FFK", 
+      "Sep": "4547FGF", "Oct": "3960FHD", "Nov": "1113FJD", "Dic": "0535FKC" }},
     {"year": 2005, "months": { 
-      "Ene": "DFZ", "Feb": "DGX", "Mar": "DHZ", "Abr": "DKB", "May": "DLD", "Jun": "DMJ", 
-      "Jul": "DNP", "Ago": "DPK", "Sep": "DRG", "Oct": "DSC", "Nov": "DTB", "Dic": "DVB" }},
+      "Ene": "6154DFZ", "Feb": "4970DGX", "Mar": "4167DHZ", "Abr": "4187DKB", 
+      "May": "1611DLD", "Jun": "7710DMJ", "Jul": "4002DNP", "Ago": "2141DPK", 
+      "Sep": "2052DRG", "Oct": "4329DSC", "Nov": "8241DTB", "Dic": "6587DVB" }},
     {"year": 2004, "months": { 
-      "Ene": "CRV", "Feb": "CSS", "Mar": "CTT", "Abr": "CVR", "May": "CWR", "Jun": "CXT", 
-      "Jul": "CYY", "Ago": "CZP", "Sep": "DBJ", "Oct": "DCH", "Nov": "DDG", "Dic": "DFF" }},
+      "Ene": "8436CRV", "Feb": "0913CSS", "Mar": "7282CTT", "Abr": "9468CVR", 
+      "May": "0300CWR", "Jun": "5814CXT", "Jul": "1758CYY", "Ago": "7243CZP", 
+      "Sep": "8990DBJ", "Oct": "0183DCH", "Nov": "2594DDG", "Dic": "4655DFF" }},
     {"year": 2003, "months": { 
-      "Ene": "CDV", "Feb": "CFM", "Mar": "CGJ", "Abr": "CHF", "May": "CJC", "Jun": "CKB", 
-      "Jul": "CLD", "Ago": "CLV", "Sep": "CMM", "Oct": "CNK", "Nov": "CPF", "Dic": "CRC" }},
+      "Ene": "2079CDV", "Feb": "5301CFM", "Mar": "7114CGJ", "Abr": "7918CHF", 
+      "May": "1886CJC", "Jun": "4989CKB", "Jul": "9974CLD", "Ago": "2563CLV", 
+      "Sep": "0231CMM", "Oct": "0879CNK", "Nov": "3575CPF", "Dic": "1135CRC" }},
     {"year": 2002, "months": { 
-      "Ene": "BSL", "Feb": "BTF", "Mar": "BTZ", "Abr": "BVW", "May": "BWT", "Jun": "BXP", 
-      "Jul": "BYP", "Ago": "BZF", "Sep": "BZV", "Oct": "CBP", "Nov": "CCH", "Dic": "CDC" }},
+      "Ene": "6587BSL", "Feb": "1647BTF", "Mar": "9656BTZ", "Abr": "1974BVW", 
+      "May": "0503BWT", "Jun": "5032BXP", "Jul": "9036BYP", "Ago": "4663BZF", 
+      "Sep": "3684BZV", "Oct": "7042CBP", "Nov": "9549CCH", "Dic": "5896CDC" }},
     {"year": 2001, "months": { 
-      "Ene": "BFJ", "Feb": "BGF", "Mar": "BHG", "Abr": "BJC", "May": "BKB", "Jun": "BLC", 
-      "Jul": "BMF", "Ago": "BMW", "Sep": "BNL", "Oct": "BPG", "Nov": "BRB", "Dic": "BRT" }},
+      "Ene": "4795BFJ", "Feb": "3229BGF", "Mar": "2731BHG", "Abr": "5412BJC", 
+      "May": "6778BKB", "Jun": "4874BLC", "Jul": "4959BMF", "Ago": "2120BMW", 
+      "Sep": "3430BNL", "Oct": "5385BPG", "Nov": "0592BRB", "Dic": "9902BRT" }},
     {"year": 2000, "months": { 
-      "Ene": "N/A", "Feb": "N/A", "Mar": "N/A", "Abr": "N/A", "May": "N/A", "Jun": "N/A", 
-      "Jul": "N/A", "Ago": "N/A", "Sep": "BBJ", "Oct": "BCD", "Nov": "BCY", "Dic": "BDR" }}
+      "Ene": "N/A", "Feb": "N/A", "Mar": "N/A", "Abr": "N/A", 
+      "May": "N/A", "Jun": "N/A", "Jul": "N/A", "Ago": "N/A", 
+      "Sep": "9263BBJ", "Oct": "3356BCD", "Nov": "2736BCY", "Dic": "5269BDR" }}
   ],
   "provincial_registrations": [
     { "province": "Araba/Álava",
