@@ -2,8 +2,7 @@
 
 ⚠️ AVÍS D'EXEMPCIÓ DE RESPONSABILITAT
 
-    Aquesta aplicació NO representa cap entitat pública, ni té cap vinculació oficial amb la Direcció General de Trànsit (DGT), el Ministeri de l'Interior o qualsevol organisme governamental d'Espanya.
-
+> Aquesta aplicació NO representa cap entitat pública, ni té cap vinculació oficial amb la Direcció General de Trànsit (DGT), el Ministeri de l'Interior o qualsevol organisme governamental d'Espanya.
 *   L'aplicació és una eina independent de caràcter informatiu i divulgatiu.
 *   Encara que la informació es basa en dades públiques oficials, l'aplicació no ofereix serveis de verificació de vehicles en temps real ni tràmits administratius oficials.
 
