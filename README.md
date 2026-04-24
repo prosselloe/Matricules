@@ -13,10 +13,10 @@
 Aquesta aplicació ofereix una referència completa del sistema de Matrícules Provincials Numèriques (1900-1971), Alfanumèriques (1971-2000) i Estatals des de 2000.
 
 **Sistema Numèric (1900-1971):**
-Una, dues o tres lletres que representen la província, seguides de fins a sis números (p. ex., B 123456).
+Una, dues o tres lletres que representen la província, seguides de fins a sis números (p. ex., B123456).
 
 **Sistema Alfanumèric (1971-2000):**
-La sigla provincial, quatre números i una o dues lletres al final (p. ex., M 1234 AB).
+La sigla provincial, quatre números i una o dues lletres al final (p. ex., M1234AB).
 
 **Validacions Alfanumèriques:**
 - **Una lletra:** No es fan servir les vocals, ni Ñ, Q, R.
