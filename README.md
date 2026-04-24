@@ -10,7 +10,32 @@
 
 ## Visió General
 
-Aquesta aplicació ofereix una referència completa del sistema provincial numèric de matriculació de vehicles utilitzat a Espanya entre l'octubre de 1900 i l'octubre de 1971. El sistema es compon d'una, dues o tres lletres que representen la província, seguides de fins a sis números.
+Aquesta aplicació ofereix una referència completa del sistema de Matrícules Provincials Numèriques (1900-1971), Alfanumèriques (1971-2000) i Estatals des de 2000.
+
+**Sistema Numèric (1900-1971):**
+Una, dues o tres lletres que representen la província, seguides de fins a sis números (p. ex., B 123456).
+
+**Sistema Alfanumèric (1971-2000):**
+La sigla provincial, quatre números i una o dues lletres al final (p. ex., M 1234 AB).
+
+**Validacions Alfanumèriques:**
+- **Una lletra:** No es fan servir les vocals, ni Ñ, Q, R.
+- **Dues lletres:**
+  - La primera lletra no pot ser Ñ, Q, R.
+  - La segona lletra no pot ser A, E, I, O, Ñ, Q, R.
+  - La combinació "WC" no està permesa.
+
+**Sistema Estatal (2000-Actualitat):**
+Format: 1234BCD
+
+- Quatre números seguits de tres lletres.
+- Les lletres no inclouen vocals, ni les lletres Ñ o Q.
+
+**Numeració:**
+El sistema de numeració de les matrícules estatals es basa en una combinació de 
+tres lletres que van avançant de manera progressiva. Les lletres utilitzades són 
+les consonants, excloent la Ñ i la Q per evitar confusions. La primera combinació 
+és 'BBB' i l'última és 'ZZZ'
 
 ---
 
